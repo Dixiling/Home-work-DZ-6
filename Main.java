@@ -89,6 +89,8 @@ public class Main {
                     System.out.println("Неверный выбор. Попробуйте снова.");
             }
         }
+        
+        scanner.close();
 
         Set<Laptop> filteredLaptops = laptops.stream()
                 .filter(laptop -> filters.getOrDefault("ram", 0) instanceof Integer && laptop.ram >= (int) filters.getOrDefault("ram", 0))
